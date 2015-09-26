@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	
+	
+	<ejb-local-ref>
+	   <ejb-ref-name>ejb/myEJB</ejb-ref-name>
+	   <ejb-ref-type>Entity</ejb-ref-type>
+	   <local-home>br.com.teste.myEJBHome</local-home>
+	   <local>br.com.teste.myEJB</local>
+	</ejb-local-ref>
+	
+	<ejb-ref>
+	   <ejb-ref-name>ejb/myEJBRemote</ejb-ref-name>
+	   <ejb-ref-type>Entity</ejb-ref-type>
+	   <home>br.com.teste.myEJBHome</home>
+	   <remote>br.com.teste.myEJB</remote>	
+	</ejb-ref>
+	
+	<mime-mapping>
+	   <extension>html</extension>
+	   <mime-type>text/html</mime-type>
+	</mime-mapping>
+	
+	<env-entry>
+	   <env-entry-name>myEntry</env-entry-name>
+	   <env-entry-type>java.lang.String</env-entry-type>
+	   <env-entry-value>Hello Pessoa</env-entry-value>
+	</env-entry>
+	
+	<error-page>
+	   <error-code>404</error-code>
+	   <location>/404.jsp</location>	   
+	</error-page>
+	<error-page>
+	   <exception-type>java.lang.Exception</exception-type>	
+	   <location>/GenericError.jsp</location>
+	</error-page>
+	
+	<welcome-file-list>
+	   <welcome-file>index.jsp</welcome-file>	
+	</welcome-file-list>
+	
+</web-app>	

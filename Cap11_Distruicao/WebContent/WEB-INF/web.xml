@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name>TesteCap11</display-name>
+	<servlet>
+		<description>Passo1 servlet.</description>
+		<servlet-name>Passo1</servlet-name>
+		<servlet-class>br.com.servlets.Passo1</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Execucao Passo2</description>
+		<display-name>Passo2</display-name>
+		<servlet-name>Passo2</servlet-name>
+		<servlet-class>br.com.servlets.Passo2</servlet-class>
+	</servlet>
+	<servlet>
+		<description>Passo3.</description>
+		<display-name>Passo3</display-name>
+		<servlet-name>Passo3</servlet-name>
+		<servlet-class>br.com.servlets.Passo3</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Passo1</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Passo2</servlet-name>
+		<url-pattern>/fooStuf/bar</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 
+	<servlet-mapping>
+		<servlet-name>Passo3</servlet-name>
+		<url-pattern>/fooStuf/*</url-pattern>
+	</servlet-mapping>
+	 -->
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
